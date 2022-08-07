@@ -1,0 +1,18 @@
+														TODO APP:
+	TAREAS REALIZADAS:
+
+	1) creamos tres componentes, TODO APP , TODO LIST y TODO ITEM,
+	2) usamos use Reduce para majar el estado de nustros todos,
+	3) Creamos un custom Hook para manejar las funciones que vamos a enviarles a nuestros componentes
+	
+
+Esta TodoApp es una practica donde ponemos en uso nuestro conocimiento del hook useReduce, en una funcion pura de js ejecutamos un switch, cons los casos a ejecutar los cuales llegan atraves de una accion, esta accion contiene un type que se
+encarga de decirle al switch que accion desea ejecutar, la segunda parte de nuestra accion contiene un payload, el cual es el valor de la accion misma.
+
+Por otro lado, creamos un custom Hook para poder ejecutar toda la logica de nustro componente TODO LIST, en el exponemos las funciones onAdd,onDeleted,onCompleted, los todos y iniciamos el estado de los todos dentro del local storage de nuestro 
+navegador.
+
+Nuestra todo app cunta con tres funciones pricipales, agregar Todos (onAddTodo), Borrar un todo especifico (onDeleted) y marcar como completada una tarea (onCompleted), asi mismo dentro del componente TODO ITEM, agregamos una clase condicional
+de boostrap que tacha el todo cuando se ejecuta la funcion onCompleted y cambia el valor del done del todo.
+Adicionalmente agragamos en el header de nustra app un pequeño contador que nos indica cuantas tareas tenemos cargadas y cuantas faltan completar, este contador cambia dinamicamente al modificarse el estado de nustros todos.
+Para podes lograr esto, hicimos uso del hook useEfect que dispara este efecto secundario al momento de modificarse el array de todos.
